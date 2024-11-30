@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@300;400;700&display=swap');
+
+:root {
+    --blanco: #fff;
+    --oscuro: #181818;
+    --primario: #7900fb;
+    --semi: #ffffff47;
+    --trans-parente: rgba(0, 0, 0, 0.1);
+}
+
+/* RESET Y CONFIGURACIÓN GLOBAL */
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Anek Devanagari', sans-serif;
+    line-height: 1.6;
+    color: var(--oscuro);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1rem 0;
+    z-index: 1000;
+}
+
+/* Estilos para la barra de navegación */
+.nav {
+    display: none; /* Ocultar el menú por defecto */
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    background-color: var(--oscuro);
+    z-index: 100;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Mostrar el menú cuando se hace hover sobre la barra de navegación */
+.nav-bg:hover .nav {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--blanco);
+    font-weight: bold;
+    padding: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto hover en los enlaces del menú */
+.nav a:hover {
+    background-color: var(--primario);
+    border-radius: 5px;
+}
+
+
+section {
+    padding: 4rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100rem;
+    max-height: 100rem;
+}
+
+.index {
+    background: linear-gradient(40deg, rgba(173, 0, 255, 1) 0%, rgba(28, 0, 177, 1) 100%);
+}
+
+.index2 {
+    background: linear-gradient(54deg, rgba(255, 0, 144, 1) 0%, rgba(255, 238, 0, 1) 100%);
+}
+
+.index3 {
+    background: linear-gradient(54deg, rgba(0, 174, 255, 1) 0%, rgba(0, 255, 83, 1) 100%);
+}
+
+.index4 {
+    background: linear-gradient(54deg, rgba(222, 174, 231, 1) 0%, rgba(193, 80, 233, 1) 49%, rgba(194, 64, 176, 1) 100%);
+}
+
+.index5 {
+    background: linear-gradient(54deg, rgba(255, 216, 0, 1) 0%, rgba(255, 118, 0, 1) 100%);
+}
+
+.contenedor-inicio,
+.contenedor-imp {
+    max-width: 130rem;
+    width: 100%;
+    padding: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--semi);
+    border-radius: 10px;
+    box-shadow: 3px 7px 28px rgba(0, 0, 0, 0.1);
+}
+
+.text {
+    width: 50%;
+    color: var(--blanco);
+    padding: 1rem 4rem;
+}
+
+.text h1 {
+    font-size: 4.8rem;
+    margin-bottom: 1rem;
+}
+
+.text p {
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+
+.img {
+    width: 40%;
+}
+
+.img img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .contenedor-inicio,
+    .contenedor-imp {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .text,
+    .img {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .text h1 {
+        font-size: 3rem;
+    }
+
+    .text p {
+        font-size: 1.6rem;
+    }
+}
